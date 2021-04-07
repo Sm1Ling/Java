@@ -28,7 +28,7 @@ public class Main {
 
         fileWriter(htmlGenerator(oldLines, "Старый файл"), "oldtext.html");
         fileWriter(htmlGenerator(newLines, "Новый файл"),"newtext.html");
-        System.out.println("Проверьте файл htmlfile.html в корневой папке проекта");
+        System.out.println("Проверьте файл diff.html в корневой папке проекта");
 
     }
 
@@ -42,6 +42,7 @@ public class Main {
     private static String htmlGenerator(List<StringHolder> lines, String title){
         //Я что, похож на фронтендера?
         //Какие такие библиотеки для Верстки?
+        //Генериться будут html подстраницы, а не сам diff.html
         StringBuilder file = new StringBuilder();
         file.append("<!DOCTYPE html>\n" +
                 "<html>\n" +
@@ -225,7 +226,6 @@ public class Main {
         }
     } */
 
-
     /***
      * Поиск наибольшей подпоследовательности двух строк. Помимо хешей можно и динамически определить типы строк.
      * Но это будет более трудоемко
@@ -300,6 +300,4 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-
 }
