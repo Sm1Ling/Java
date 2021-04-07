@@ -1,0 +1,112 @@
+public static void wagnerFischer(String s, String t, List<String> fin, List<Byte> types) {
+        int[][] table = new int[s.length() + 1][t.length() + 1];
+    
+        for (int i = 0; i <= s.length(); i++) {
+            table[i][0] = i;
+        }
+        for (int i = 0; i <= t.length(); i++) {
+            table[0][i] = i;
+        }
+    
+        for (int j = 1; j <= t.length(); j++) {
+            for (int i = 1; i <= s.length(); i++) {
+                if (s.charAt(i - 1) == t.charAt(j - 1)) {
+                    table[i][j] = table[i - 1][j - 1];
+                } else {
+                    table[i][j] = Math.min(table[i - 1][j] + 1,
+                            Math.min(table[i][j - 1] + 1,
+                                    table[i - 1][j - 1] + 1));
+                }
+            }
+        }
+    
+        
+        System.out.print("*  T  ");
+        for(int i = 0; i < t.length(); i++){
+            System.out.print((t.charAt(i)!='\n'?t.charAt(i)+"  ":"\\n "));
+        }
+        System.out.println();
+        for (int i = 0; i <= s.length(); i++) {
+            for (int j = 0; j <= t.length(); j++) {
+                if(j == 0){
+                    if(i == 0){
+                        System.out.print("S  ");
+                    }else {
+                        System.out.print((s.charAt(i-1)!='\n'?s.charAt(i-1)+"  ":"\\n "));
+                    }
+                }
+                System.out.printf("%-3d",table[i][j]);
+            }
+            System.out.println();
+        }
+    
+        int i = s.length();
+        int j = t.length();
+        int index = Math.max(s.length(),t.length()) -1;
+        String line = "";
+        String type = "";
+        int min;
+        boolean newline = false;
+    
+        while (i > 0 && j > 0) {
+            min = Math.min(table[i - 1][j - 1] + 1,
+                    Math.min(table[i][j - 1] + 1,
+                            table[i - 1][j] + 1));
+    
+            if (table[i - 1][j - 1] + 1 == min && i != 1 && j != 1) {
+    
+                if (s.charAt(i - 1) != '\n') {
+                    line += String.format("%-3s",s.charAt(i - 1));
+                } else {
+                    newline = true;
+                    line += "\\n ";
+                }
+                if (table[i][j] == table[i - 1][j - 1]) {
+                    type += "M  ";
+                } else {
+                    type += "R  ";
+                }
+                i--;
+                j--;
+            } else if (table[i][j - 1] + 1 == min) {
+    
+                if (t.charAt(j - 1) != '\n') {
+                    line += String.format("%-3s",t.charAt(j - 1));
+                } else {
+                    newline = true;
+                    line += "\\n ";
+                }
+                type += "I  ";
+                j--;
+            } else {
+    
+                if (s.charAt(i - 1) != '\n') {
+                    line += String.format("%-3s",s.charAt(i - 1));
+                } else {
+                    newline = true;
+                    line += "\\n ";
+                }
+                type += "D  ";
+                i--;
+            }
+    
+              if (newline) {
+                fin.add(new StringBuilder(line).reverse().toString());
+    
+                types.add(typeMatcher(type));
+                type = "";
+                line = "";
+                newline = false;
+            }
+        }
+	if (!line.isEmpty()) {
+            fin.add(new StringBuilder(line).reverse().toString());
+            types.add(typeMatcher(type));
+        }
+        Collections.reverse(fin);
+        Collections.reverse(types);
+        System.out.println(new StringBuilder(line).reverse().toString());
+        System.out.println(new StringBuilder(type).reverse().toString());
+        //TODO разобраться, правильно ли работает алгоритм и добить вопрос с \n (сейчас он вызывает проблемы)
+        System.out.println();
+    }

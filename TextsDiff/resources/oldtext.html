@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+tr:nth-child(1) {
+background: #fffff;
+border-bottom: 2px solid
+text-align: center
+height: 17px;
+}
+tr {
+height: 18px;
+border-bottom: none;
+margin: 0px;
+cellspacing: none;
+} 
+td {
+width: 100%;
+height: 10px;
+text-align: left;
+}
+</style>
+</head>
+<body>
+<table style="height: 37px; width: 100%; border-spacing: 0px; border-collapse: collapse; border-style: hidden;" border="1">
+<tbody>
+<tr>
+<td bgcolor="#e8d150" colspan="2">Старый файл</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">0</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">public static void wagnerFischer(String s, String t, List<String> fin, List<Byte> types) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">1</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">int[][] table = new int[s.length() + 1][t.length() + 1];</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">2</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">3</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int i = 0; i <= s.length(); i++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">4</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[i][0] = i;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">5</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">6</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int i = 0; i <= t.length(); i++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">7</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[0][i] = i;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">8</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">9</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">10</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int j = 1; j <= t.length(); j++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">11</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int i = 1; i <= s.length(); i++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">12</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (s.charAt(i - 1) == t.charAt(j - 1)) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">13</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[i][j] = table[i - 1][j - 1];</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">14</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">15</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[i][j] = Math.min(table[i - 1][j] + 1,</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">16</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">Math.min(table[i][j - 1] + 1,</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">17</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[i - 1][j - 1] + 1));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">18</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">19</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">20</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">21</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">22</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">23</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.print("*  T  ");</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">24</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for(int i = 0; i < t.length(); i++){</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">25</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.print((t.charAt(i)!='\n'?t.charAt(i)+"  ":"\\n "));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">26</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">27</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.println();</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">28</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int i = 0; i <= s.length(); i++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">29</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">for (int j = 0; j <= t.length(); j++) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">30</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if(j == 0){</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">31</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if(i == 0){</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">32</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.print("S  ");</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">33</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">34</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.print((s.charAt(i-1)!='\n'?s.charAt(i-1)+"  ":"\\n "));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">35</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">36</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">37</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.printf("%-3d",table[i][j]);</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">38</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">39</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.println();</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">40</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">41</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">42</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">int i = s.length();</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">43</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">int j = t.length();</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">44</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">int index = Math.max(s.length(),t.length()) -1;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">45</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">String line = "";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">46</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">String type = "";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">47</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">int min;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">48</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">boolean newline = false;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">49</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">50</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">while (i > 0 && j > 0) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">51</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">min = Math.min(table[i - 1][j - 1] + 1,</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">52</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">Math.min(table[i][j - 1] + 1,</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">53</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">table[i - 1][j] + 1));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">54</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">55</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">if (table[i - 1][j - 1] + 1 == min && i != 1 && j != 1) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">56</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">57</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">if (s.charAt(i - 1) != '\n') {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">58</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">line += String.format("%-3s",s.charAt(i - 1));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">59</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">60</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">newline = true;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#dfdfdf">61</td>
+<td bgcolor="#dfdfdf" style="padding-left: 2%;">line += "\\n ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">62</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">63</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (table[i][j] == table[i - 1][j - 1]) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">64</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">type += "M  ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">65</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">66</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">type += "R  ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">67</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">68</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">i--;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">69</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">j--;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">70</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else if (table[i][j - 1] + 1 == min) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">71</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">72</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (t.charAt(j - 1) != '\n') {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">73</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">line += String.format("%-3s",t.charAt(j - 1));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">74</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">75</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">newline = true;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#dfdfdf">76</td>
+<td bgcolor="#dfdfdf" style="padding-left: 2%;">line += "\\n ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">77</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">78</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">type += "I  ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">79</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">j--;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">80</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">81</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">82</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (s.charAt(i - 1) != '\n') {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">83</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">line += String.format("%-3s",s.charAt(i - 1));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">84</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">} else {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">85</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">newline = true;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#dfdfdf">86</td>
+<td bgcolor="#dfdfdf" style="padding-left: 2%;">line += "\\n ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">87</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#73bde8">88</td>
+<td bgcolor="#73bde8" style="padding-left: 2%;">type += "D  ";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">89</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">i--;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">90</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">91</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">92</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (newline) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">93</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">fin.add(new StringBuilder(line).reverse().toString());</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">94</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;"></td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">95</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">types.add(typeMatcher(type));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">96</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">type = "";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">97</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">line = "";</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">98</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">newline = false;</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">99</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">100</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">101</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">if (!line.isEmpty()) {</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">102</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">fin.add(new StringBuilder(line).reverse().toString());</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">103</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">types.add(typeMatcher(type));</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">104</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">105</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">Collections.reverse(fin);</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">106</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">Collections.reverse(types);</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">107</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.println(new StringBuilder(line).reverse().toString());</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">108</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.println(new StringBuilder(type).reverse().toString());</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">109</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">//TODO разобраться, правильно ли работает алгоритм и добить вопрос с \n (сейчас он вызывает проблемы)</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">110</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">System.out.println();</td>
+</tr>
+<tr>
+<td style="width:5px;" bgcolor="#ffffff">111</td>
+<td bgcolor="#ffffff" style="padding-left: 2%;">}</td>
+</tr>
+</tbody>
+</table>
+  </body>
+</html>
